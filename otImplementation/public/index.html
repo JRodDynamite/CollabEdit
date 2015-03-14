@@ -1,0 +1,59 @@
+<html>
+<head>
+  <link rel="stylesheet" href="./node_modules/codemirror/lib/codemirror.css" />
+  <style>
+#editor
+{
+position: absolute;
+width: 1000px;
+height: 550px;
+top: 125px;
+right: 0;
+bottom: 0;
+left: 287px;
+border:1px solid gray;
+}
+#userlist
+{
+position: absolute;
+left: 12px;
+top: 125px;
+bottom: 0;
+height: 550px;
+width: 255px;
+border:1px solid gray;
+
+}
+  </style>
+</head>
+
+<body>
+    <h1>Pair Programming</h1>
+    <br>
+    <p>Enter your name in the text provided, before starting coding in the editor</p>
+      <div id="editor">
+       
+      </div>
+        <div id="userlist">
+	  <form id="login_form">
+             <input id="username" type="text" placeholder="Enter your Name" required="required" value="" />
+             <input type="submit" id="mysubmit" value="Join" />
+          </form>
+          <h3>Users Online::</h3>
+      </div>
+
+  <script src="./node_modules/codemirror/lib/codemirror.js"></script>
+  <script src="./node_modules/codemirror/mode/xml/xml.js"></script>
+  <script src="./node_modules/codemirror/mode/markdown/markdown.js"></script>
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script>
+    var useSocketIO = window.location.hash !== '#ajax';
+    if (useSocketIO) {
+      document.write('<'+'script src="/socket.io/socket.io.js"></'+'script>');
+    }
+  </script>
+  <script src="./ot.js"></script>
+  <script src="./client.js"></script>
+</body>
+
+</html>
